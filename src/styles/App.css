@@ -1,0 +1,11 @@
+body {
+  /* background: linear-gradient(135deg, rgb(50, 3, 3), rgb(0, 0, 0)) */
+  background-color:rgb(50, 3, 3)
+
+}
+
+.App {
+  margin: 1px;
+  padding: 1px;
+}
+
