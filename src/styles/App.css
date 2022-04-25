@@ -9,3 +9,14 @@ body {
   padding: 1px;
 }
 
+.spells-div{
+  background-color: rgb(66, 85, 39);
+}
+
+.houses-div{
+  background-color: rgb(68, 47, 19);
+}
+
+.houses-grid{
+  display: grid;
+}
