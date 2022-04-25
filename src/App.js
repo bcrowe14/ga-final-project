@@ -7,10 +7,9 @@ import axios from "axios";
 import { BASE_URL, HOUSE_URL } from "./globals";
 
 function App() {
-  const [displaySpells, setDisplaySpells] = useState(null);
+  const [spells, setSpells] = useState(null);
   const [houses, setHouses] = useState([]);
   const [selectedHouse, setSelectedHouse] = useState(null);
-  const random = Math.floor(Math.random() * 4);
 
   const selectHouse = (id) => {
     setSelectedHouse(id);
@@ -24,33 +23,38 @@ function App() {
     const getHouses = async () => {
       const response = await axios.get(`${HOUSE_URL}`);
       setHouses(response.data);
-      console.log(random);
-      const randomHouse = response.data[random].name;
+      console.log(response.data);
     };
     getHouses();
   }, []);
 
   // useEffect(() => {
-  //   const getSpell = async () => {
+  //   const getSpells = async () => {
+  //     const random = Math.floor(Math.random() * 99);
   //     const response = await axios.get(BASE_URL)
-  //     setSpell(response)
+  //     setSpells(response)
   //     // console.log(response)
   //     console.log(response.data[random].name)
   //   }
-  //   getSpell()
+  //   getSpells()
   // }, [])
 
   return (
     <div className="App">
       <h1>Wizzard Stuff</h1>
+
       {selectedHouse ? (
         <HouseDetails selectedHouse={selectedHouse} goBack={goBack} />
       ) : (
         <Houses houses={houses} selectHouse={selectHouse} />
       )}
 
+  {/* {selectedHouse ? null : <Spells />} */}
+
       <br></br>
+
       {selectedHouse ? null : <Spells />}
+
     </div>
   );
 }
