@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { SPELLS_URL, BASE_URL, HOUSE_URL } from "../globals";
+import Spells from "./Spells";
+import { Link, Router } from 'react-router-dom';
 
 const HouseDetails = (props) => {
     const [houseDetails, setHouseDetails] = useState(null)
@@ -26,6 +28,8 @@ const HouseDetails = (props) => {
                 <p>Colors: {houseDetails.houseColours}</p>
                 <p>Animal: {houseDetails.animal}</p>
               </div>
+
+
               <button onClick={props.goBack}>Go Back</button>
             </div>
           ) : (

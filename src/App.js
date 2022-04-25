@@ -12,7 +12,6 @@ function App() {
   const [selectedHouse, setSelectedHouse] = useState(null);
   const random = Math.floor(Math.random() * 4);
 
-
   const selectHouse = (id) => {
     setSelectedHouse(id);
   };
@@ -26,7 +25,7 @@ function App() {
       const response = await axios.get(`${HOUSE_URL}`);
       setHouses(response.data);
       console.log(random);
-      const randomHouse = response.data[random].name
+      const randomHouse = response.data[random].name;
     };
     getHouses();
   }, []);
@@ -51,8 +50,7 @@ function App() {
       )}
 
       <br></br>
-
-      {/* <Spells /> */}
+      {selectedHouse ? null : <Spells />}
     </div>
   );
 }
