@@ -4,6 +4,7 @@ import { SPELLS_URL, BASE_URL, HOUSE_URL } from "../globals";
 
 const Houses = (props) => {
 
+
   
   return (
     <div className="houses-container">
@@ -12,7 +13,8 @@ const Houses = (props) => {
           src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/6/17/asset/buzzfeed-prod-web-03/anigif_sub-buzz-1840-1541543688-1.gif?downsize=700:*&output-format=auto&output-quality=auto"
           atl="sorting-hat-img"
         />
-    <link to ='/Spells' ></link>
+        {/* <button>What House Are You?</button> */}
+
         <br/>
 
         {props.houses.map((house) => (
