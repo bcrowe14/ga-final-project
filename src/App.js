@@ -4,31 +4,32 @@ import Spells from "./components/Spells";
 import Houses from "./components/Houses";
 import HouseDetails from "./components/HouseDetails";
 import axios from "axios";
-import { BASE_URL,HOUSE_URL } from "./globals";
-
-
+import { BASE_URL, HOUSE_URL } from "./globals";
 
 function App() {
-  const [displaySpells, setDisplaySpells] = useState(null)
-  const [houses, setHouses] = useState([])
-  const [selectedHouses, setSelectedHouses] = useState(null)
+  const [displaySpells, setDisplaySpells] = useState(null);
+  const [houses, setHouses] = useState([]);
+  const [selectedHouse, setSelectedHouse] = useState(null);
+  const random = Math.floor(Math.random() * 4);
 
-  const selectHouses = (id) => {
-    setSelectedHouses(id)
-  }
+
+  const selectHouse = (id) => {
+    setSelectedHouse(id);
+  };
 
   const goBack = () => {
-    setSelectedHouses(null)
-  }
+    setSelectedHouse(null);
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     const getHouses = async () => {
-      const response = await axios.get(`${HOUSE_URL}`)
-      setHouses(response.data)
-      console.log(response.data);
-    }
-    getHouses()
-  },[])
+      const response = await axios.get(`${HOUSE_URL}`);
+      setHouses(response.data);
+      console.log(random);
+      const randomHouse = response.data[random].name
+    };
+    getHouses();
+  }, []);
 
   // useEffect(() => {
   //   const getSpell = async () => {
@@ -40,21 +41,19 @@ function App() {
   //   getSpell()
   // }, [])
 
-
-
-
   return (
     <div className="App">
-          <h1>Wizzard Stuff</h1>
-          {selectedHouses ? (
-        <HouseDetails selectedHouses={selectedHouses} goBack={goBack}/>
+      <h1>Wizzard Stuff</h1>
+      {selectedHouse ? (
+        <HouseDetails selectedHouse={selectedHouse} goBack={goBack} />
       ) : (
-        <Houses houses={houses} selectHouses={selectHouses} />
+        <Houses houses={houses} selectHouse={selectHouse} />
       )}
 
-          {/* <Spells />
-          <Houses /> */}
-        </div>
+      <br></br>
+
+      {/* <Spells /> */}
+    </div>
   );
 }
 

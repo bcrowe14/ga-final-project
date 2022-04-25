@@ -7,12 +7,13 @@ const HouseDetails = (props) => {
 
     useEffect(() => {
         const getHouseDetails = async () => {
-          const response = await axios.get(`${HOUSE_URL}`)
+          const response = await axios.get(`${BASE_URL}houses/${props.selectedHouse}`)
           setHouseDetails(response.data)
           console.log(response.data);
+          console.log(props.selectedHouse);
         }
         getHouseDetails()
-      }, [props.selectedMovie])
+      }, [props.selectedHouse])
     
       return (
         <div>
@@ -21,13 +22,14 @@ const HouseDetails = (props) => {
               <div className="card">
                 {/* <img src={`${POSTER_PATH}${movieDetails.backdrop_path}`} alt="poster"/> */}
                 <h2>{houseDetails.name}</h2>
-                <p>{houseDetails.element}</p>
-                <p>color: {houseDetails.houseColours}</p>
+                <p>Element: {houseDetails.element}</p>
+                <p>Colors: {houseDetails.houseColours}</p>
+                <p>Animal: {houseDetails.animal}</p>
               </div>
               <button onClick={props.goBack}>Go Back</button>
             </div>
           ) : (
-            <h3>Loading...</h3>
+            <h3>Arresto Momentum...</h3>
           )}
         </div>
       )

@@ -3,30 +3,27 @@ import axios from "axios";
 import { SPELLS_URL, BASE_URL, HOUSE_URL } from "../globals";
 
 const Houses = (props) => {
-//   const [houses, setHouses] = useState(null);
 
-//   useEffect(() => {
-//     const getHouses = async () => {
-//       const response = await axios.get(HOUSE_URL);
-//       setHouses(response);
-//       // console.log(response.data[random].name);
-//     //   console.log(response.data);
-//     };
-//     getHouses();
-//   }, [displayHouses]);
-  //  console.log(response.data[0].name);
-
+  
   return (
-    <div className="houses-div">From houses.jsx
-      {
-        props.houses.map((houses) => (
-          <div key={houses.id} className="house-div2">
-            {/* <img src={`${POSTER_PATH}${movie.poster_path}`} alt="poster" /> */}
-            <h3>{houses.name}</h3>
-            <button onClick={() => props.selectHouses(houses.id)}>View House</button>
-          </div>  
-        ))
-      }
+    <div className="houses-container">
+        <img
+        className="sorting-hat-img"
+          src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/6/17/asset/buzzfeed-prod-web-03/anigif_sub-buzz-1840-1541543688-1.gif?downsize=700:*&output-format=auto&output-quality=auto"
+          atl="sorting-hat-img"
+        />
+
+        <br/>
+
+        {props.houses.map((house) => (
+          <div key={house.id} className="card">
+            <h3>{house.name}</h3>
+            <button onClick={() => props.selectHouse(house.id)}>
+              Learn More About Your House
+            </button>
+          </div>
+        ))}
+
     </div>
   );
 };
