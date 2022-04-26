@@ -23,7 +23,7 @@ const HouseDetails = (props) => {
             <div className="details">
               <div className="card">
                 {/* <img src={`${POSTER_PATH}${movieDetails.backdrop_path}`} alt="poster"/> */}
-                <h2>{houseDetails.name}</h2>
+                <h2 className="house-name-h2">{houseDetails.name}</h2>
                 <p className="house-details">
                 Element: {houseDetails.element} <br/>
                 Colors: {houseDetails.houseColours} <br/>
