@@ -10,15 +10,6 @@ const Spells = (props) => {
     <div className="spells-div">
       <h2 className="spells-h2"> Practice Random Spell </h2>
 
-      {/* {props.houses.map((house) => (
-          <div key={house.id} className="card">
-            <h3>{house.name}</h3>
-            <button onClick={() => props.selectHouse(house.id)}>
-              Learn More About Your House
-            </button>
-          </div>
-        ))} */}
-
     </div>
   );
 };
