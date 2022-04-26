@@ -3,17 +3,6 @@ import axios from "axios";
 import { SPELLS_URL, BASE_URL, HOUSE_URL } from "../globals";
 
 const Houses = (props) => {
-    // const [randomHouse, setRandomHouse] = useState(null);
-    // useEffect(() => {
-    //     const getRandomHouse = async () => {
-    //       const response = await axios.get(`${HOUSE_URL}`);
-    //       const randomNum = Math.floor(Math.random() * 99);
-    //       const randomHouse = response.data[random].name;
-    //       setRandomHouse(randomHouse);
-    //       console.log(randomHouse);
-    //     }
-    //     getRandomHouse()
-    //   }, []);
   
   return (
     <div className="houses-container">
