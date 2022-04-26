@@ -24,9 +24,11 @@ const HouseDetails = (props) => {
               <div className="card">
                 {/* <img src={`${POSTER_PATH}${movieDetails.backdrop_path}`} alt="poster"/> */}
                 <h2>{houseDetails.name}</h2>
-                <p>Element: {houseDetails.element}</p>
-                <p>Colors: {houseDetails.houseColours}</p>
-                <p>Animal: {houseDetails.animal}</p>
+                <p className="house-details">
+                Element: {houseDetails.element} <br/>
+                Colors: {houseDetails.houseColours} <br/>
+                Animal: {houseDetails.animal} <br/>
+                </p>
               </div>
 
 

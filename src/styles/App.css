@@ -12,12 +12,13 @@ body {
 }
 
 .houses-div{
-  background-color: rgb(66, 85, 39);
+background-color: rgb(66, 85, 39);
 }
 
 .houses-container{
 padding-left: 20%;
-padding-right: 20%;
+padding-right: 20%;  
+
 }
 
 .sorting-hat-img{
