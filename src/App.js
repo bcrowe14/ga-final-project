@@ -42,7 +42,6 @@ function App() {
   return (
     <div className="App">
       <h1>Wizzard Stuff</h1>
-
       {selectedHouse ? (
         <HouseDetails selectedHouse={selectedHouse} goBack={goBack} />
       ) : (
@@ -54,7 +53,6 @@ function App() {
       <br></br>
 
       {selectedHouse ? null : <Spells />}
-
     </div>
   );
 }
