@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./styles/App.css";
-import Spells from "./components/Spells";
+import Spells from "./components/Spells"; 
 import Houses from "./components/Houses";
 import HouseDetails from "./components/HouseDetails";
 import axios from "axios";
@@ -49,7 +49,7 @@ function App() {
         <Houses houses={houses} selectHouse={selectHouse} />
       )}
 
-  {/* {selectedHouse ? null : <Spells />} */}
+      {/* {selectedHouse ? null : <Spells />} */}
 
       <br></br>
 
