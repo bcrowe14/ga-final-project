@@ -19,7 +19,6 @@ function App() {
     setSelectedHouse(null);
   };
 
-
   useEffect(() => {
     const getHouses = async () => {
       const response = await axios.get(`${HOUSE_URL}`);
