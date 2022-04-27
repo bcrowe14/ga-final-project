@@ -19,6 +19,12 @@ function App() {
     setSelectedHouse(null);
   };
 
+  const randomBtn = () => {
+    const random = Math.floor(Math.random() * 3);
+    
+
+  }
+
   useEffect(() => {
     const getHouses = async () => {
       const response = await axios.get(`${HOUSE_URL}`);
@@ -30,8 +36,7 @@ function App() {
 
   // useEffect(() => {
   //   const getSpells = async () => {
-  //     const random = Math.floor(Math.random() * 99);
-  //     const response = await axios.get(BASE_URL)
+  //    const response = await axios.get(BASE_URL)
   //     setSpells(response)
   //     // console.log(response)
   //     console.log(response.data[random].name)
@@ -43,14 +48,12 @@ function App() {
     <div className="App">
       <h1>Wizzard Stuff</h1>
       {selectedHouse ? (
-        <HouseDetails selectedHouse={selectedHouse} goBack={goBack} />
+        <HouseDetails selectedHouse={selectedHouse} goBack={goBack} randomBtn={randomBtn} />
       ) : (
         <Houses houses={houses} selectHouse={selectHouse} />
       )}
 
-      {/* {selectedHouse ? null : <Spells />} */}
-
-      <br></br>
+      <br></br><br></br><br></br><br></br>
 
       {selectedHouse ? null : <Spells />}
     </div>

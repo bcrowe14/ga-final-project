@@ -8,17 +8,20 @@ body {
 }
 
 .spells-div{
-  background-color: rgb(66, 85, 39);
+  
 }
 
 .houses-div{
 background-color: rgb(66, 85, 39);
+display: flex;
+flex-direction: column;
+text-align: center;
+margin: auto;
 }
 
 .houses-container{
 padding-left: 20%;
 padding-right: 20%;  
-
 }
 
 .sorting-hat-img{
@@ -33,7 +36,16 @@ padding-right: 20%;
   flex-direction: column;
   text-align: center;
   margin: auto;
+  background-color: rgb(66, 85, 39);
 }
+
+.spells-img{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
 .house-name-h2{
   font-weight: bold;
 }

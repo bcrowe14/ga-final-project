@@ -8,8 +8,14 @@ const Spells = (props) => {
 
   return (
     <div className="spells-div">
-      <h2 className="spells-h2"> Practice Random Spell </h2>
-
+      <h2 className="spells-h2"> Practice Spells *coming soon* </h2>
+      <br></br>
+      <img
+        className="spells-img"
+          src="https://qph.fs.quoracdn.net/main-qimg-790e037260b6fc75606e2d205b7ff38a-pjlq"
+          atl="spells-img"
+        />
+    
     </div>
   );
 };
