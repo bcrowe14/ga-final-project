@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./styles/App.css";
-import Spells from "./components/Spells"; 
+import Spells from "./components/Spells";
 import Houses from "./components/Houses";
 import HouseDetails from "./components/HouseDetails";
 import axios from "axios";
@@ -28,17 +28,19 @@ function App() {
     getHouses();
   }, []);
 
-
   return (
     <div className="App">
       <h1>Wizzard Stuff</h1>
       {selectedHouse ? (
-        <HouseDetails selectedHouse={selectedHouse} goBack={goBack}/>
+        <HouseDetails selectedHouse={selectedHouse} goBack={goBack} />
       ) : (
         <Houses houses={houses} selectHouse={selectHouse} />
       )}
 
-      <br></br><br></br><br></br><br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       {selectedHouse ? null : <Spells />}
     </div>

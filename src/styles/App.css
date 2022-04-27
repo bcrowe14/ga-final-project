@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(0.25turn, rgb(50, 3, 3), rgb(0, 0, 0));
-  color:white;
+  color: white;
 }
 
 .App {
@@ -8,62 +8,76 @@ body {
   padding: 1px;
 }
 
-.spells-div{
-  
+.spells-div {
 }
 
-.random-house-div{
-
-}
-
-.random-house-h1{
-font-size: 40px;
-color:white;
-
-}
-
-.random-house-btn{
-
-}
-
-.houses-div{
-background-color: rgb(50,11, 11);
-display: flex;
-flex-direction: column;
-text-align: center;
-margin: auto;
-}
-
-.houses-container{
-padding-left: 20%;
-padding-right: 20%;  
-}
-
-.sorting-hat-img{
+.random-house-div {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: auto;
+}
+
+.random-house-h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.random-house-btn {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  font:500px;
+  padding: 1em 1em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(62, 106, 21);
+  color: white;
+  transition: all 0.2s ease;
+  font-weight: 700;
+  width:auto;
   
 }
 
-.spells-h2{
+.houses-div {
+  background-color: rgb(50, 11, 11);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   text-align: center;
-  background-color: rgb(50,11, 11);
+  margin: auto;
+}
+
+.houses-container {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.sorting-hat-img {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+.spells-h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(50, 11, 11);
   margin-right: 400px;
-  margin-left:  400px;
+  margin-left: 400px;
 }
 
-.spells-img{
+.spells-img {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: auto;
 }
 
-.house-name-h2{
+.house-name-h2 {
   font-weight: bold;
 }
 
@@ -95,15 +109,15 @@ button:hover {
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
-  background-color: rgb(50,11, 11);
+  background-color: rgb(50, 11, 11);
   margin: 10px;
-  margin-right:200px;
+  margin-right: 200px;
   margin-left: 200px;
 }
 
 .card button {
   border-radius: 8px;
-  margin:auto;
+  margin: auto;
 }
 
 .card img {
