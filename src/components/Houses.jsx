@@ -3,7 +3,15 @@ import axios from "axios";
 import { SPELLS_URL, BASE_URL, HOUSE_URL } from "../globals";
 
 const Houses = (props) => {
+    const [randomNumber, setRandomNumber] = useState(null)
+    const [effectLogs, setEffectLogs] = useState([])
   
+    useEffect(() => {
+        setEffectLogs(prevEffectLogs => [...prevEffectLogs, 'effect fn has been invoked'])
+      },
+      []
+    )
+    
   return (
     <div className="houses-container">
         <h2 className="houses-div"> Hogwarts Houses </h2>
@@ -14,7 +22,25 @@ const Houses = (props) => {
           atl="sorting-hat-img"
         />
 
-        {/* <button onClick={props.randomBtn.house}> What House Are You? </button> */}
+        <div className="random-house-div">
+      <h1 className="random-house-h1">{randomNumber}</h1>
+      <button className="random-house-btn"
+        onClick={() => {
+           const randomNum=Math.floor(Math.random() * 4)
+        //   console.log(Math.floor(Math.random() * 4));
+          console.log(props.houses[randomNum].name);
+          const randomHouse = props.houses[randomNum].name
+          setRandomNumber(randomHouse)
+        }}
+      >
+        Ask The Sorting Hat Which House You Belong In
+      </button>
+
+    </div>
+
+
+
+
 
         <br/>
 
@@ -32,3 +58,5 @@ const Houses = (props) => {
 };
 
 export default Houses;
+
+

@@ -19,11 +19,6 @@ function App() {
     setSelectedHouse(null);
   };
 
-  const randomBtn = () => {
-    const random = Math.floor(Math.random() * 3);
-
-
-  }
 
   useEffect(() => {
     const getHouses = async () => {
@@ -39,7 +34,7 @@ function App() {
     <div className="App">
       <h1>Wizzard Stuff</h1>
       {selectedHouse ? (
-        <HouseDetails selectedHouse={selectedHouse} goBack={goBack} randomBtn={randomBtn} />
+        <HouseDetails selectedHouse={selectedHouse} goBack={goBack}/>
       ) : (
         <Houses houses={houses} selectHouse={selectHouse} />
       )}
