@@ -21,7 +21,7 @@ function App() {
 
   const randomBtn = () => {
     const random = Math.floor(Math.random() * 3);
-    
+
 
   }
 
@@ -34,15 +34,6 @@ function App() {
     getHouses();
   }, []);
 
-  // useEffect(() => {
-  //   const getSpells = async () => {
-  //    const response = await axios.get(BASE_URL)
-  //     setSpells(response)
-  //     // console.log(response)
-  //     console.log(response.data[random].name)
-  //   }
-  //   getSpells()
-  // }, [])
 
   return (
     <div className="App">
